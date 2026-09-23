@@ -1,0 +1,24 @@
+# Compiled Object and Executable files
+*.o
+*.ko
+*.obj
+*.elf
+findmax
+
+# Kernel module generated files
+*.mod
+*.mod.c
+.tmp_versions/
+modules.order
+Module.symvers
+.*.cmd
+
+# Editor and OS files
+.vscode/
+.DS_Store
+
+# Large datasets and archives
+*.tar.xz
+*.tar.gz
+*.zip
+input*.txt
