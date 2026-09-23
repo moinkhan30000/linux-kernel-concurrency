@@ -29,3 +29,14 @@ make
 
 # Load the kernel module
 sudo insmod processinfo.ko
+
+```
+## Benchmarking & Performance
+The system was benchmarked on an Ubuntu 22.04 LTS (64-bit) 8-core virtual machine using a 10,000,000 integer dataset. See `Performance_Analysis.pdf` for full caching and context-switching metrics.
+
+| Child Processes (N) | Execution Time (s) | Core Utilization Notes |
+| :--- | :--- | :--- |
+| 1 | 0.024020 | Sequential baseline |
+| 8 | 0.013654 | Optimal parallelism (matches VM core count) |
+| 10 | 0.019294 | Core oversubscription; OS context-switching overhead |
+| 20 | 0.029956 | Subsystem capacity exceeded; severe cache thrashing |
